@@ -63,7 +63,8 @@ This allows you to run `neoterm` from the command line to open
 the terminal emulator.
 
 On other platforms you can use the traditional methods to create
-a shortcut to run `neovide -- -u '~/.config/neoterm/neoterm.lua'`
+a shortcut to run:  
+`neovide -- -u '~/.config/neoterm/neoterm.lua'`
 
 ## Extras
 
