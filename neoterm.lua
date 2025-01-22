@@ -1,17 +1,9 @@
 if vim.g.neovide then
-	local cursor_vfx = { "railgun", "torpedo", "pixiedust", "sonicboom", "ripple", "wireframe" }
-	math.randomseed(os.time())
-
-	vim.g.neovide_cursor_vfx_mode = cursor_vfx[math.random(1, #cursor_vfx)]
-
-	vim.keymap.set("n", "<F11>", function()
-		vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
-	end, {})
-
 	-- Set GUI font
 	-- vim.opt.guifont = "Iosevka Rootiest V2:#e-subpixelantialias:h12"
+
 	-- refresh rate and translucency
-	vim.g.neovide_refresh_rate = 170
+	vim.g.neovide_refresh_rate = 120
 	vim.g.neovide_transparency = 0.85
 	vim.g.neovide_window_blurred = true
 	vim.g.neovide_floating_blur_amount_x = 2.0
@@ -73,12 +65,9 @@ if vim.g.neovide then
 		bg = vim.g.neovide_background_color,
 	})
 
-	-- Title background color
-	vim.g.neovide_title_background_color =
-		string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name("Normal") }).bg)
-
-	-- Title text color
-	vim.g.neovide_title_text_color = "pink"
+	-- Titlebar Colors
+	vim.g.neovide_title_text_color = vim.g.terminal_color_13 -- pink
+	vim.g.neovide_title_background_color = vim.g.neovide_background_color --terminal background
 
 	-- Clipboard mappings
 	local modes = { "n", "v", "c", "i" }
@@ -104,6 +93,11 @@ if vim.g.neovide then
 			vim.keymap.set(mode, "<C-S-c>", ":w !xsel -i -b<CR>", { silent = true })
 		end
 	end
+
+	-- F11 toggle fullscreen
+	vim.keymap.set("n", "<F11>", function()
+		vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
+	end, {})
 
 	------------------------------------------------------------------------------------------------------
 	-- The code below this line defines the terminal behavior and generally should not need to be modified
