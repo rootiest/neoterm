@@ -9,7 +9,7 @@ if vim.g.neovide then
 	end, {})
 
 	-- Set GUI font
-	vim.opt.guifont = "Iosevka Rootiest V2:#e-subpixelantialias:h12"
+	-- vim.opt.guifont = "Iosevka Rootiest V2:#e-subpixelantialias:h12"
 	-- refresh rate and translucency
 	vim.g.neovide_refresh_rate = 170
 	vim.g.neovide_transparency = 0.85
@@ -104,6 +104,10 @@ if vim.g.neovide then
 			vim.keymap.set(mode, "<C-S-c>", ":w !xsel -i -b<CR>", { silent = true })
 		end
 	end
+
+	------------------------------------------------------------------------------------------------------
+	-- The code below this line defines the terminal behavior and generally should not need to be modified
+	------------------------------------------------------------------------------------------------------
 
 	-- Hide commandline
 	vim.o.laststatus = 0

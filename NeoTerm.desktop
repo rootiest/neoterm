@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=Runs a terminal emulator using Neovide GUI wrapper
+Exec=neovide -- -u '~/.config/neoterm/neoterm.lua'
+GenericName=Neovide-based terminal emulator
+Icon=utilities-terminal
+Name=NeoTerm
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
