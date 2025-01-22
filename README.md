@@ -65,6 +65,11 @@ the terminal emulator.
 On other platforms you can use the traditional methods to create
 a shortcut to run `neovide -- -u '~/.config/neoterm/neoterm.lua'`
 
+## Extras
+
+[Rootiest Iosevka Font](https://github.com/rootiest/rootiest-iosevka) -
+A custom Iosevka font that is designed by developers, for developers.
+
 ## Thanks
 
 Special thanks to Reddit user d3bug64 who wrote the original
