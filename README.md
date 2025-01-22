@@ -45,7 +45,7 @@ You can create a shortcut to make executing this command easier.
 In Linux GUIs you can run the following:
 
 ```bash
-cp ~/.config/neoterm/NeoTerm.desktop ~/.local/share/applications/
+ln -s ~/.config/neoterm/NeoTerm.desktop ~/.local/share/applications/NeoTerm.desktop
 ```
 
 The desktop file can be found here: [NeoTerm.desktop](NeoTerm.desktop)
